@@ -1,0 +1,52 @@
+﻿@using EntityLayer
+@model EntityLayer.Product
+
+
+<!-- partial -->
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            PRODUCT UPDATE PAGE
+                        </h4>
+                        <form asp-action="Update" asp-controller="Product" method="post">
+                            <div style="display:none" class="mb-3">
+                                <label for="studentId" class="form-label">Product Id</label>
+                                <input readonly asp-for="productId" type="number" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="productName" class="form-label">Product Name</label>
+                                <input asp-for="productName" type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Price" class="form-label">Price</label>
+                                <input type="number" class="form-control" asp-for="Price">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Quantity" class="form-label">Quantity</label>
+                                <input type="number" class="form-control" asp-for="Quantity">
+                            </div>
+                            <div class="mb-3">
+                                <label for="createdat" class="form-label">Create Date</label>
+                                <input type="datetime" class="form-control" asp-for="createdat">
+                            </div>
+                            <div class="mb-3">
+                                <label for="categoryId" class="form-label">Category ID</label>
+                                <input type="number" class="form-control" asp-for="categoryId">
+                            </div>
+                            <button type="submit" class="btn btn-primary">UPDATE PRODUCT</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:partials/_footer.html -->
+    <!-- partial -->
+</div>
+<!-- main-panel ends -->

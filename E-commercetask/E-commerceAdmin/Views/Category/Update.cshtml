@@ -1,0 +1,36 @@
+﻿@using EntityLayer
+@model EntityLayer.Category
+
+
+<!-- partial -->
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            CATEGORY UPDATE PAGE
+                        </h4>
+                        <form asp-action="Update" asp-controller="Category" method="post">
+                            <div style="display:none" class="mb-3">
+                                <label for="studentId" class="form-label">Product Id</label>
+                                <input readonly asp-for="categoryId" type="number" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="categoryName" class="form-label">Category Name</label>
+                                <input asp-for="categoryName" type="text" class="form-control">
+                            </div>                        
+                            <button type="submit" class="btn btn-primary">UPDATE CATEGORY</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:partials/_footer.html -->
+    <!-- partial -->
+</div>
+<!-- main-panel ends -->

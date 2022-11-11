@@ -1,0 +1,45 @@
+﻿<!-- partial -->
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            Product Information
+                        </h4>
+                        <form asp-action="Add" asp-controller="Product" method="post">
+                            <div class="mb-3 mt-5">
+                                <label for="productName" class="form-label">Product Name</label>
+                                <input type="text" class="form-control" name="productName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Price" class="form-label">Price</label>
+                                <input type="number" class="form-control" name="Price">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Quantity" class="form-label">Quantity</label>
+                                <input type="number" class="form-control" name="Quantity">
+                            </div>
+                             <div class="mb-3">
+                                <label for="createdat" class="form-label">Create Date</label>
+                                <input type="datetime" class="form-control" name="createdat">
+                            </div>
+                            <div class="mb-3">
+                                <label for="categoryId" class="form-label">Category ID</label>
+                                <input type="number" class="form-control" name="categoryId">
+                            </div>
+                            <button type="submit" class="btn btn-primary">ADD PRODUCT</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:partials/_footer.html -->
+    <!-- partial -->
+</div>
+<!-- main-panel ends -->
+  </div>
