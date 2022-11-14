@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Fp3UWHK9Ktrq4SsWgG6XWC+K/f3YrC6+JGtDiMHesv9KZkqqWJLMLEXVO69UWC8mEzJKoc6R/aMV+BkccFWWEw==",
+  "dgSpecHash": "BbqCnZi7yyOwpa94wlk30ecddyIXitiydw4UYbyO09A36yhkIu6PVCc/jL5Vf3uqEydYqe38HDdyw2ri6LA/EQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\nidal\\source\\repos\\E-commercetask\\E-commercetaskUI\\E-commercetaskUI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\nidal\\.nuget\\packages\\fluentvalidation\\11.3.0\\fluentvalidation.11.3.0.nupkg.sha512",
     "C:\\Users\\nidal\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\nidal\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\nidal\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

@@ -1,6 +1,9 @@
 ﻿using BusinessLayer.Abstract;
+using BusinessLayer.Validations;
 using DataAccessLayer.Concrete;
 using EntityLayer;
+using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -15,6 +18,7 @@ namespace E_commerceAdmin.Controllers
         {
            this.productService = productService;
         }
+        [Authorize(Roles ="admin")]
         public IActionResult Index()
         {
             var result = productService.ListAllProduct();
@@ -28,8 +32,21 @@ namespace E_commerceAdmin.Controllers
         [HttpPost]
         public IActionResult Add(Product product)
         {
-            var result = productService.AddProduct(product);
-            return RedirectToAction("Index");
+            ProductValidator productvalidator = new ProductValidator();
+            ValidationResult results = productvalidator.Validate(product);
+            if (results.IsValid)
+            {
+                productService.AddProduct(product);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
         }
         [HttpGet]
         public IActionResult Update(int id)
@@ -41,9 +58,21 @@ namespace E_commerceAdmin.Controllers
         [HttpPost]
         public IActionResult Update(Product product)
         {
-            productService.UpdateProduct(product);
-            return RedirectToAction("Index");
-
+            ProductValidator productvalidator = new ProductValidator();
+            ValidationResult results = productvalidator.Validate(product);
+            if (results.IsValid)
+            {
+                productService.UpdateProduct(product);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
         }
 
         [HttpGet]

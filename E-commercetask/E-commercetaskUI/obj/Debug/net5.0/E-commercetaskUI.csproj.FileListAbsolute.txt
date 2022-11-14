@@ -71,4 +71,3 @@ C:\Users\nidal\source\repos\E-commercetask\E-commercetaskUI\obj\Debug\net5.0\ref
 C:\Users\nidal\source\repos\E-commercetask\E-commercetaskUI\obj\Debug\net5.0\E-commercetaskUI.pdb
 C:\Users\nidal\source\repos\E-commercetask\E-commercetaskUI\obj\Debug\net5.0\E-commercetaskUI.genruntimeconfig.cache
 C:\Users\nidal\source\repos\E-commercetask\E-commercetaskUI\obj\Debug\net5.0\ref\E-commercetaskUI.dll
-C:\Users\nidal\source\repos\E-commercetask\E-commercetaskUI\obj\Debug\net5.0\Razor\Views\Home\ListAllProducts.cshtml.g.cs

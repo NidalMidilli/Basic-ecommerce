@@ -8,6 +8,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
+
 namespace E_commerceAdmin.Controllers
 {
     public class LoginController : Controller
@@ -31,7 +32,8 @@ namespace E_commerceAdmin.Controllers
             if(informations != null)
             {
                 var claims = new List<Claim> {
-                    new Claim(ClaimTypes.Name, user.userName),                   
+                    new Claim(ClaimTypes.Name, informations.userName),
+                    new Claim(ClaimTypes.Role,informations.rol)
                 };
                 var identity = new ClaimsIdentity(claims, "Login");
 
