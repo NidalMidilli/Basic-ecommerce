@@ -3017,7 +3017,8 @@
         "dependencies": {
           "DataAccessLayer": "1.0.0",
           "EntityLayer": "1.0.0",
-          "FluentValidation": "11.3.0"
+          "FluentValidation": "11.3.0",
+          "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.0"
         },
         "compile": {
           "bin/placeholder/BusinessLayer.dll": {}
